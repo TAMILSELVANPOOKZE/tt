@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>login_form</title>
+
+<style type="text/css">
+	body{
+		
+		background-image: linear-gradient(to bottom right, #86574a, #12acea);
+
+	}
+	.login{
+		      width: 413px;
+    height: 479px;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    padding-left: 38px;
+    box-sizing: border-box;
+    transform: translate(115%,14%);
+    border-radius: 10px;
+    padding-right: 19px;
+
+}
+.login input[type="text"],input[type="password"]
+{
+	border: none;
+    border-bottom: 3px solid #d2caca;
+    outline: none;
+    background:transparent;
+
+}
+button{
+	text-align: center;
+    /* margin-right: 138px; */
+    border-radius: 27px;
+    /* padding: 6px; */
+    font-size: 20px;
+    width: 271px;
+    height: 40px;
+    color: white;
+    margin-left: 37px;
+    font-family: sans-serif;
+    background-image: linear-gradient(to bottom right, #d328f1, #12acea);
+}
+span{
+	color: red;
+}
+
+</style> 
+</head>
+<body>  
+<div class="login" >   
+<form class="form" id="log" action="register.html" onsubmit="return fun()">
+	<br>
+<h2 style="text-align: center;
+    font-family: sans-serif;">CREATE ACCOUNT</h2><br>
+<input  type="text" name="username" id="uid" placeholder="Firstname"  style="margin-bottom: 23px;">
+
+<input type="text" name="lastname" id="lid" placeholder="Lastname" style=" float: right;">
+<span id="p1" ></span><span id="p2"></span>
+
+<br><br>
+<input type="text" name="email" id="mailid" placeholder="Email"style="margin-bottom: 23px;padding-right: 187px;">
+<p id="p3"></p>
+<br><br>
+<input type="password" name="password" id="pass" placeholder="Password"style="margin-bottom: 23px;padding-right: 187px;">
+<p id="p4"></p><br><br>
+
+<input type="password" name="repassword" id="repass" placeholder="Re-type Password"style="margin-bottom: 49px;padding-right: 187px;"><p id="p5"></p><br>
+<br>
+<button type="submit" id="btn" >SIGN UP</button>
+<br><br>
+<a href="#">Forget password!</a>
+</form>
+</div>
+<script type="text/javascript">
+	function fun(){
+		var name = document.getElementById("uid")
+		var lname = document.getElementById("lid")
+		var mail = document.getElementById("mailid")
+		if(name.value=="")
+		{
+			document.getElementById("p1").innerHTML="please enter the name..!"
+			name.focus();
+			name.style.border="solid 5px red";
+			return false;
+
+		}
+		else
+		{
+			if(lname.value=="")
+			{
+			name.style.border="solid 5px white";
+			document.getElementById("p1").innerHTML="";
+			document.getElementById("p2").innerHTML="please enter last name..!"
+			lname.focus();
+			lname.style.border="solid 2px red";
+			return false;
+			}
+
+		}
+		
+		
+		
+			
+         
+         
+		
+	}
+</script>
+
+
+
+
+
+</body>
+</html>
